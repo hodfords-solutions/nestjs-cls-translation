@@ -1,6 +1,6 @@
 {
   "name": "@hodfords/nestjs-cls-translation",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hodfords-community/nestjs-cls-translation"
+    "url": "git+https://github.com/hodfords-solutions/nestjs-cls-translation"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hodfords-community/nestjs-cls-translation/issues"
+    "url": "https://github.com/hodfords-solutions/nestjs-cls-translation/issues"
   },
-  "homepage": "https://github.com/hodfords-community/nestjs-cls-translation#readme",
+  "homepage": "https://github.com/hodfords-solutions/nestjs-cls-translation#readme",
   "dependencies": {
     "@hodfords/cls-hooked": "4.3.0",
     "nestjs-i18n": "^9.0.10"
