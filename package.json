@@ -1,0 +1,44 @@
+{
+  "name": "@hodfords/nestjs-cls-translation",
+  "version": "1.0.5",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "postbuild": "cp package.json dist/package.json",
+    "format": "prettier --write \"libs/**/*.ts\"",
+    "prepare": "is-ci || husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hodfords-community/nestjs-cls-translation"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hodfords-community/nestjs-cls-translation/issues"
+  },
+  "homepage": "https://github.com/hodfords-community/nestjs-cls-translation#readme",
+  "dependencies": {
+    "@hodfords/cls-hooked": "1.0.3",
+    "nestjs-i18n": "^9.0.10"
+  },
+  "devDependencies": {
+    "@nestjs/bull": "0.4.1",
+    "@nestjs/common": "8.0.5",
+    "@nestjs/core": "8.0.5",
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.6.1",
+    "express": "^4.17.3",
+    "husky": "^7.0.4",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^12.4.1",
+    "prettier": "2.5.1",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
+    "rxjs": "^7.3.0",
+    "typescript": "^4.3.5"
+  }
+}
