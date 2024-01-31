@@ -1,11 +1,11 @@
-import { TranslationService } from '../services/translation.service';
+import cls from '@hodfords/cls-hooked';
 import {
     CLS_TRANSLATION_NAMESPACE,
     CLS_TRANSLATION_NAMESPACE_NAME
 } from '../constants/cls-translation-namespace.constant';
 import { IS_FULL_LANGUAGE } from '../constants/language-key.constant';
+import { TranslationService } from '../services/translation.service';
 import { RunInLanguageParams, TranslateOptions } from '../types';
-import cls from '@hodfords/cls-hooked';
 
 export function trans(key: string, options: TranslateOptions = {}) {
     return TranslationService.instance.translate(key, options);
