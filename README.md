@@ -1,6 +1,6 @@
 We are using package https://www.npmjs.com/package/nestjs-i18n. So check out the info here.
 
-#Module
+# Module
 ```
 TranslationModule.forRoot({
     fallbackLanguage: 'en',
@@ -14,22 +14,22 @@ TranslationModule.forRoot({
 
 ```
 
-#Translate
+# Translate
 ```
 await trans('error.an_error_occurred')
 ```
 
-#Get current language
+# Get current language
 ```
 currentLanguage()
 ```
 
-#Get default language
+# Get default language
 ```
 defaultLanguage()
 ```
 
-#Run with a language
+# Run with a language
 ```
 await runInLanguage('en', () => ...);
 ```
