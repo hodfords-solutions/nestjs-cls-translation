@@ -1,9 +1,10 @@
 import { ExecutionContext, Injectable } from '@nestjs/common';
 import { ModuleRef } from '@nestjs/core';
 import { I18nOptions, I18nService, I18N_OPTIONS } from 'nestjs-i18n';
-import { CLS_RESOLVERS, CLS_TRANSLATION_NAMESPACE, DEFAULT_LANGUAGE_KEY, PRIORITY_LANGUAGE_GETTER } from '../constants';
+import { CLS_RESOLVERS, DEFAULT_LANGUAGE_KEY, PRIORITY_LANGUAGE_GETTER } from '../constants';
 import { ClsResolver } from '../interfaces';
 import { LanguageKeyMap, TranslateOptions } from '../types';
+import { ClsService } from 'nestjs-cls';
 
 @Injectable()
 export class TranslationService {
@@ -16,7 +17,8 @@ export class TranslationService {
 
     constructor(
         private i18nService: I18nService<Record<string, string>>,
-        private moduleRef: ModuleRef
+        private moduleRef: ModuleRef,
+        private clsService: ClsService
     ) {
         TranslationService.instance = this;
         this.clsResolvers = this.moduleRef.get(CLS_RESOLVERS, { strict: false });
@@ -46,7 +48,7 @@ export class TranslationService {
     }
 
     getCurrentLanguage() {
-        const defaultLanguage = CLS_TRANSLATION_NAMESPACE.get(this.defaultLanguageKey);
+        const defaultLanguage = this.clsService.get(this.defaultLanguageKey);
         return typeof defaultLanguage === 'string' && defaultLanguage !== ''
             ? defaultLanguage
             : this.i18nOptions.fallbackLanguage;
@@ -57,7 +59,7 @@ export class TranslationService {
     }
 
     getLanguageByKey(key: string) {
-        const language = CLS_TRANSLATION_NAMESPACE.get(key);
+        const language = this.clsService.get(key);
         return typeof language === 'string' && language !== '' ? language : undefined;
     }
 

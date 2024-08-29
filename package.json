@@ -1,6 +1,6 @@
 {
   "name": "@hodfords/nestjs-cls-translation",
-  "version": "10.1.0",
+  "version": "10.2.0-rc.1",
   "description": "Provides context-aware translations in NestJS using CLS",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/hodfords-solutions/nestjs-cls-translation#readme",
   "dependencies": {
-    "@hodfords/cls-hooked": "4.3.0",
+    "nestjs-cls": "^4.4.1",
     "nestjs-i18n": "10.4.5"
   },
   "devDependencies": {

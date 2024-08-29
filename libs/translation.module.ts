@@ -5,6 +5,7 @@ import { TranslationMiddleware } from './middlewares/translation.middleware';
 import { CustomI18nResolver } from './resolves';
 import { TranslationService } from './services/translation.service';
 import { TranslationOptions } from './types';
+import { ClsModule } from 'nestjs-cls';
 
 @Global()
 @Module({})
@@ -20,6 +21,10 @@ export class TranslationModule {
                 I18nModule.forRoot({
                     ...config,
                     resolvers: config.resolvers || config.clsResolvers.map((item) => new CustomI18nResolver(item))
+                }),
+                ClsModule.forRoot({
+                    global: true,
+                    middleware: { mount: true }
                 })
             ],
             providers: [
