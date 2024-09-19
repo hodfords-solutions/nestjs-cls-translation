@@ -3,13 +3,14 @@ import { IncomingMessage } from 'http';
 import { ExecutionContext, Injectable } from '@nestjs/common';
 import { LanguageKeyMap, LanguageKeyType } from '../types';
 import { ClsResolver } from '../interfaces';
+import { Request } from 'express';
 
 @Injectable()
 export class RequestResolver implements ClsResolver {
     constructor(private keys: LanguageKeyType[] = []) {}
 
     resolve(context: ExecutionContext): LanguageKeyMap {
-        let req: any;
+        let req: Request | ExecutionContext;
         if (context instanceof ExecutionContextHost) {
             switch (context.getType() as string) {
                 case 'http':
