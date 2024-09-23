@@ -4,6 +4,7 @@ import { I18nOptions, I18nService, I18N_OPTIONS } from 'nestjs-i18n';
 import { CLS_RESOLVERS, CLS_TRANSLATION_NAMESPACE, DEFAULT_LANGUAGE_KEY, PRIORITY_LANGUAGE_GETTER } from '../constants';
 import { ClsResolver } from '../interfaces';
 import { LanguageKeyMap, TranslateOptions } from '../types';
+import { Request } from 'express';
 
 @Injectable()
 export class TranslationService {
@@ -25,7 +26,7 @@ export class TranslationService {
         this.priorityLanguageGetter = this.moduleRef.get(PRIORITY_LANGUAGE_GETTER, { strict: false });
     }
 
-    translate(key: string, options?: TranslateOptions) {
+    translate(key: string, options?: TranslateOptions): string {
         if (!options) {
             options = {};
         }
@@ -41,31 +42,31 @@ export class TranslationService {
         return this.i18nService.translate(key, options);
     }
 
-    getDefaultLanguageKey() {
+    getDefaultLanguageKey(): string {
         return this.defaultLanguageKey;
     }
 
-    getCurrentLanguage() {
+    getCurrentLanguage(): string {
         const defaultLanguage = CLS_TRANSLATION_NAMESPACE.get(this.defaultLanguageKey);
         return typeof defaultLanguage === 'string' && defaultLanguage !== ''
             ? defaultLanguage
             : this.i18nOptions.fallbackLanguage;
     }
 
-    getDefaultLanguage() {
+    getDefaultLanguage(): string {
         return this.i18nOptions.fallbackLanguage;
     }
 
-    getLanguageByKey(key: string) {
+    getLanguageByKey(key: string): string {
         const language = CLS_TRANSLATION_NAMESPACE.get(key);
         return typeof language === 'string' && language !== '' ? language : undefined;
     }
 
-    resolverLanguageFromRequest(request: any): LanguageKeyMap {
+    resolverLanguageFromRequest(request: ExecutionContext | Request): LanguageKeyMap {
         let allParams: LanguageKeyMap = {};
 
         for (const resolver of this.clsResolvers) {
-            let params = resolver.resolve(request as ExecutionContext);
+            const params = resolver.resolve(request as ExecutionContext);
             allParams = { ...allParams, ...params };
         }
 

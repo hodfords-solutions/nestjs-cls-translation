@@ -9,7 +9,7 @@ import { TranslationOptions } from './types';
 @Global()
 @Module({})
 export class TranslationModule {
-    configure(consumer: MiddlewareConsumer) {
+    configure(consumer: MiddlewareConsumer): void {
         consumer.apply(TranslationMiddleware).forRoutes('*');
     }
 
