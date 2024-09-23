@@ -8,7 +8,7 @@ import { TranslationService } from '../services/translation.service';
 export class TranslationMiddleware implements NestMiddleware {
     constructor(private translationService: TranslationService) {}
 
-    use(req: Request, res: Response, next: NextFunction) {
+    use(req: Request, res: Response, next: NextFunction): void {
         CLS_TRANSLATION_NAMESPACE.bindEmitter(req);
         CLS_TRANSLATION_NAMESPACE.bindEmitter(res);
 
