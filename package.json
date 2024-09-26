@@ -6,7 +6,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc",
-    "postbuild": "cp package.json dist/package.json",
+    "postbuild": "cp package.json dist && cp README.md dist && cp .npmrc dist",
     "format": "prettier --write \"lib/**/*.ts\"",
     "cspell": "cspell",
     "prepare": "is-ci || husky",
