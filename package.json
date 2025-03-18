@@ -1,6 +1,6 @@
 {
   "name": "@hodfords/nestjs-cls-translation",
-  "version": "11.0.1",
+  "version": "11.0.2",
   "description": "Provides context-aware translations in NestJS using CLS",
   "main": "index.js",
   "scripts": {
@@ -44,7 +44,7 @@
     "rimraf": "6.0.1",
     "rxjs": "7.8.2",
     "typescript": "5.8.2",
-    "@hodfords/nestjs-eslint-config": "11.0.0",
-    "@hodfords/nestjs-prettier-config": "11.0.0"
+    "@hodfords/nestjs-eslint-config": "11.0.1",
+    "@hodfords/nestjs-prettier-config": "11.0.1"
   }
 }
