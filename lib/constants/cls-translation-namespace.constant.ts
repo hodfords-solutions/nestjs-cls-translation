@@ -1,4 +1,4 @@
-import cls from '@hodfords/cls-hooked';
+import { ClsServiceManager } from 'nestjs-cls';
 
 export const CLS_TRANSLATION_NAMESPACE_NAME = 'translation';
-export const CLS_TRANSLATION_NAMESPACE = cls.createNamespace(CLS_TRANSLATION_NAMESPACE_NAME);
+export const CLS_TRANSLATION_NAMESPACE = ClsServiceManager.getClsService();
