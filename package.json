@@ -1,6 +1,6 @@
 {
   "name": "@hodfords/nestjs-cls-translation",
-  "version": "11.0.2",
+  "version": "11.1.0",
   "description": "Provides context-aware translations in NestJS using CLS",
   "main": "index.js",
   "scripts": {
@@ -25,10 +25,15 @@
   },
   "homepage": "https://github.com/hodfords-solutions/nestjs-cls-translation#readme",
   "dependencies": {
-    "@hodfords/cls-hooked": "4.3.0",
+    "nestjs-cls": "6.0.1",
     "nestjs-i18n": "10.5.1"
   },
+  "peerDependencies": {
+    "nestjs-cls": ">=6.0.0"
+  },
   "devDependencies": {
+    "@hodfords/nestjs-eslint-config": "11.0.1",
+    "@hodfords/nestjs-prettier-config": "11.0.1",
     "@nestjs/common": "11.0.11",
     "@nestjs/core": "11.0.11",
     "@types/express": "5.0.0",
@@ -43,8 +48,6 @@
     "reflect-metadata": "0.2.2",
     "rimraf": "6.0.1",
     "rxjs": "7.8.2",
-    "typescript": "5.8.2",
-    "@hodfords/nestjs-eslint-config": "11.0.1",
-    "@hodfords/nestjs-prettier-config": "11.0.1"
+    "typescript": "5.8.2"
   }
 }
