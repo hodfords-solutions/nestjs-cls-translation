@@ -1,53 +1,53 @@
 {
-  "name": "@hodfords/nestjs-cls-translation",
-  "version": "11.1.0",
-  "description": "Provides context-aware translations in NestJS using CLS",
-  "main": "index.js",
-  "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "tsc",
-    "postbuild": "cp package.json dist && cp README.md dist && cp .npmrc dist",
-    "format": "prettier --write \"lib/**/*.ts\"",
-    "cspell": "cspell",
-    "prepare": "is-ci || husky",
-    "lint": "eslint \"lib/**/*.ts\" --fix --max-warnings 0",
-    "lint-staged": "lint-staged"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hodfords-solutions/nestjs-cls-translation"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hodfords-solutions/nestjs-cls-translation/issues"
-  },
-  "homepage": "https://github.com/hodfords-solutions/nestjs-cls-translation#readme",
-  "dependencies": {
-    "nestjs-cls": "6.0.1",
-    "nestjs-i18n": "10.5.1"
-  },
-  "peerDependencies": {
-    "nestjs-cls": ">=6.0.0"
-  },
-  "devDependencies": {
-    "@hodfords/nestjs-eslint-config": "11.0.1",
-    "@hodfords/nestjs-prettier-config": "11.0.1",
-    "@nestjs/common": "11.0.11",
-    "@nestjs/core": "11.0.11",
-    "@types/express": "5.0.0",
-    "@types/node": "22.13.10",
-    "cspell": "8.17.5",
-    "eslint": "9.22.0",
-    "express": "4.21.2",
-    "husky": "9.1.7",
-    "is-ci": "4.1.0",
-    "lint-staged": "15.5.0",
-    "prettier": "3.5.3",
-    "reflect-metadata": "0.2.2",
-    "rimraf": "6.0.1",
-    "rxjs": "7.8.2",
-    "typescript": "5.8.2"
-  }
+    "name": "@hodfords/nestjs-cls-translation",
+    "version": "11.1.1",
+    "description": "Provides context-aware translations in NestJS using CLS",
+    "main": "index.js",
+    "scripts": {
+        "prebuild": "rimraf dist",
+        "build": "tsc",
+        "postbuild": "cp package.json dist && cp README.md dist && cp .npmrc dist",
+        "format": "prettier --write \"lib/**/*.ts\"",
+        "cspell": "cspell",
+        "prepare": "is-ci || husky",
+        "lint": "eslint \"lib/**/*.ts\" --fix --max-warnings 0",
+        "lint-staged": "lint-staged"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hodfords-solutions/nestjs-cls-translation"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hodfords-solutions/nestjs-cls-translation/issues"
+    },
+    "homepage": "https://github.com/hodfords-solutions/nestjs-cls-translation#readme",
+    "dependencies": {
+        "nestjs-cls": "6.2.0",
+        "nestjs-i18n": "10.6.0"
+    },
+    "peerDependencies": {
+        "nestjs-cls": ">=6.0.0"
+    },
+    "devDependencies": {
+        "@hodfords/nestjs-eslint-config": "11.0.2",
+        "@hodfords/nestjs-prettier-config": "11.0.1",
+        "@nestjs/common": "11.1.12",
+        "@nestjs/core": "11.1.12",
+        "@types/express": "5.0.6",
+        "@types/node": "25.2.0",
+        "cspell": "9.6.3",
+        "eslint": "9.39.2",
+        "express": "5.2.1",
+        "husky": "9.1.7",
+        "is-ci": "4.1.0",
+        "lint-staged": "16.2.7",
+        "prettier": "3.8.1",
+        "reflect-metadata": "0.2.2",
+        "rimraf": "6.1.2",
+        "rxjs": "7.8.2",
+        "typescript": "5.9.3"
+    }
 }
