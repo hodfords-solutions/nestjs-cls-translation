@@ -3,6 +3,9 @@ import { IS_FULL_LANGUAGE } from '../constants/language-key.constant';
 import { TranslationService } from '../services/translation.service';
 import { RunInLanguageParams, TranslateOptions } from '../types';
 
+// Path segments that would let a key walk into the prototype chain via nestjs-cls' setValueFromPath.
+const dangerousLanguageKeys = new Set(['__proto__', 'constructor', 'prototype']);
+
 export function trans(key: string, options: TranslateOptions = {}): string {
     return TranslationService.instance.translate(key, options);
 }
@@ -36,6 +39,10 @@ export function runInLanguage<T>(
             CLS_TRANSLATION_NAMESPACE.set(TranslationService.instance.getDefaultLanguageKey(), params);
         } else if (params && typeof params === 'object') {
             for (const [key, language] of Object.entries(params)) {
+                if (key.split('.').some((segment) => dangerousLanguageKeys.has(segment))) {
+                    console.warn('runInLanguage ignored an unsafe language key to prevent prototype pollution:', key);
+                    continue;
+                }
                 CLS_TRANSLATION_NAMESPACE.set(key, language);
             }
         }
