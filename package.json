@@ -10,6 +10,7 @@
         "format": "prettier --write \"lib/**/*.ts\"",
         "cspell": "cspell",
         "prepare": "is-ci || husky",
+        "test": "vitest run",
         "lint": "eslint \"lib/**/*.ts\" --fix --max-warnings 0",
         "lint-staged": "lint-staged"
     },
@@ -48,6 +49,7 @@
         "reflect-metadata": "0.2.2",
         "rimraf": "6.1.2",
         "rxjs": "7.8.2",
-        "typescript": "5.9.3"
+        "typescript": "5.9.3",
+        "vitest": "^4.1.10"
     }
 }
