@@ -1,8 +1,8 @@
 import { ExecutionContextHost } from '@nestjs/core/helpers/execution-context-host';
 import { IncomingMessage } from 'http';
 import { ExecutionContext, Injectable } from '@nestjs/common';
-import { LanguageKeyMap, LanguageKeyType } from '../types';
-import { ClsResolver } from '../interfaces';
+import { LanguageKeyMap, LanguageKeyType } from '../types/index.js';
+import { ClsResolver } from '../interfaces/index.js';
 import { Request } from 'express';
 
 @Injectable()

@@ -1,1 +1,1 @@
-export * from './cls-resolver.interface';
+export * from './cls-resolver.interface.js';

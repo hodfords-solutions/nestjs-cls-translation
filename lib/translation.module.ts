@@ -1,10 +1,10 @@
 import { DynamicModule, Global, MiddlewareConsumer, Module } from '@nestjs/common';
 import { I18nModule } from 'nestjs-i18n';
-import { CLS_RESOLVERS, DEFAULT_LANGUAGE_KEY, LANGUAGE_KEY, PRIORITY_LANGUAGE_GETTER } from './constants';
-import { TranslationMiddleware } from './middlewares/translation.middleware';
-import { CustomI18nResolver } from './resolves';
-import { TranslationService } from './services/translation.service';
-import { TranslationOptions } from './types';
+import { CLS_RESOLVERS, DEFAULT_LANGUAGE_KEY, LANGUAGE_KEY, PRIORITY_LANGUAGE_GETTER } from './constants/index.js';
+import { TranslationMiddleware } from './middlewares/translation.middleware.js';
+import { CustomI18nResolver } from './resolves/index.js';
+import { TranslationService } from './services/translation.service.js';
+import { TranslationOptions } from './types/index.js';
 
 @Global()
 @Module({})

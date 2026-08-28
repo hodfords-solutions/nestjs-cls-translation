@@ -1,7 +1,7 @@
-import { CLS_TRANSLATION_NAMESPACE } from '../constants/cls-translation-namespace.constant';
-import { IS_FULL_LANGUAGE } from '../constants/language-key.constant';
-import { TranslationService } from '../services/translation.service';
-import { RunInLanguageParams, TranslateOptions } from '../types';
+import { CLS_TRANSLATION_NAMESPACE } from '../constants/cls-translation-namespace.constant.js';
+import { IS_FULL_LANGUAGE } from '../constants/language-key.constant.js';
+import { TranslationService } from '../services/translation.service.js';
+import { RunInLanguageParams, TranslateOptions } from '../types/index.js';
 
 // Path segments that would let a key walk into the prototype chain via nestjs-cls' setValueFromPath.
 const dangerousLanguageKeys = new Set(['__proto__', 'constructor', 'prototype']);

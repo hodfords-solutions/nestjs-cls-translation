@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import { afterEach, describe, expect, it } from 'vitest';
-import { runInLanguage } from '../lib/helpers/translation.helper';
-import { CLS_TRANSLATION_NAMESPACE } from '../lib/constants';
+import { runInLanguage } from '../lib/helpers/translation.helper.js';
+import { CLS_TRANSLATION_NAMESPACE } from '../lib/constants/index.js';
 
 describe('runInLanguage prototype-pollution guard', () => {
     afterEach(() => {
