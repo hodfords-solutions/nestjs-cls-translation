@@ -1,4 +1,4 @@
-import { ExecutionContextHost } from '@nestjs/core/helpers/execution-context-host';
+import { ExecutionContextHost } from '@nestjs/core/helpers/execution-context-host.js';
 import { IncomingMessage } from 'http';
 import { ExecutionContext, Injectable } from '@nestjs/common';
 import { LanguageKeyMap, LanguageKeyType } from '../types/index.js';
