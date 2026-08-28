@@ -1,6 +1,6 @@
 {
     "name": "@hodfords/nestjs-cls-translation",
-    "version": "12.0.0",
+    "version": "12.0.1",
     "description": "Provides context-aware translations in NestJS using CLS",
     "main": "./index.js",
     "scripts": {
