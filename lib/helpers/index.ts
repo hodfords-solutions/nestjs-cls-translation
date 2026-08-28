@@ -1,1 +1,1 @@
-export * from './translation.helper';
+export * from './translation.helper.js';

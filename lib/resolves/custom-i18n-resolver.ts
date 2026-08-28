@@ -1,5 +1,5 @@
 import { ExecutionContext } from '@nestjs/common';
-import { ClsResolver } from '../interfaces';
+import { ClsResolver } from '../interfaces/index.js';
 import { I18nResolver } from 'nestjs-i18n';
 
 export class CustomI18nResolver implements I18nResolver {

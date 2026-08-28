@@ -1,4 +1,4 @@
-import { ClsResolver } from '../interfaces';
+import { ClsResolver } from '../interfaces/index.js';
 import { I18nOptions, TranslateOptions as I18nTranslateOptions } from 'nestjs-i18n';
 
 export type TranslationOptions = I18nOptions & {

@@ -1,8 +1,8 @@
 import { Injectable, NestMiddleware } from '@nestjs/common';
 import { NextFunction, Request, Response } from 'express';
-import { CLS_TRANSLATION_NAMESPACE } from '../constants/cls-translation-namespace.constant';
-import { runInLanguage } from '../helpers/translation.helper';
-import { TranslationService } from '../services/translation.service';
+import { CLS_TRANSLATION_NAMESPACE } from '../constants/cls-translation-namespace.constant.js';
+import { runInLanguage } from '../helpers/translation.helper.js';
+import { TranslationService } from '../services/translation.service.js';
 
 @Injectable()
 export class TranslationMiddleware implements NestMiddleware {

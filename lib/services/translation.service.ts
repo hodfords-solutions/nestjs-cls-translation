@@ -1,9 +1,14 @@
 import { ExecutionContext, Injectable } from '@nestjs/common';
 import { ModuleRef } from '@nestjs/core';
 import { I18nOptions, I18nService, I18N_OPTIONS } from 'nestjs-i18n';
-import { CLS_RESOLVERS, CLS_TRANSLATION_NAMESPACE, DEFAULT_LANGUAGE_KEY, PRIORITY_LANGUAGE_GETTER } from '../constants';
-import { ClsResolver } from '../interfaces';
-import { LanguageKeyMap, TranslateOptions } from '../types';
+import {
+    CLS_RESOLVERS,
+    CLS_TRANSLATION_NAMESPACE,
+    DEFAULT_LANGUAGE_KEY,
+    PRIORITY_LANGUAGE_GETTER
+} from '../constants/index.js';
+import { ClsResolver } from '../interfaces/index.js';
+import { LanguageKeyMap, TranslateOptions } from '../types/index.js';
 import { Request } from 'express';
 
 @Injectable()
