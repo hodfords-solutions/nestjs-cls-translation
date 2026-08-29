@@ -22,7 +22,7 @@ export function defaultLanguage(): string {
     return TranslationService.instance.getDefaultLanguage();
 }
 
-export function getLanguageByKey(key: string): string {
+export function getLanguageByKey(key: string): string | undefined {
     return TranslationService.instance.getLanguageByKey(key);
 }
 
