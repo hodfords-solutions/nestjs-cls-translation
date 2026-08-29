@@ -62,7 +62,7 @@ export class TranslationService {
         return this.i18nOptions.fallbackLanguage;
     }
 
-    getLanguageByKey(key: string): string {
+    getLanguageByKey(key: string): string | undefined {
         const language = CLS_TRANSLATION_NAMESPACE.get(key);
         return typeof language === 'string' && language !== '' ? language : undefined;
     }

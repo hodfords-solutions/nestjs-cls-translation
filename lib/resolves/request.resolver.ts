@@ -10,7 +10,7 @@ export class RequestResolver implements ClsResolver {
     constructor(private keys: LanguageKeyType[] = []) {}
 
     resolve(context: ExecutionContext): LanguageKeyMap {
-        let req: Request | ExecutionContext;
+        let req: Request | ExecutionContext | undefined;
         if (context instanceof ExecutionContextHost) {
             switch (context.getType() as string) {
                 case 'http':
@@ -33,8 +33,8 @@ export class RequestResolver implements ClsResolver {
                         'RequestResolver does not support RFC4647 Accept-Language header. Please use AcceptLanguageResolver instead.'
                     );
                 }
-                const resolvedKey = (req[type] || {})[key];
-                if (resolvedKey) {
+                const resolvedKey = ((req as Request)[type] || {})[key];
+                if (typeof resolvedKey === 'string' && resolvedKey) {
                     params[alias || key] = resolvedKey;
                 }
             }

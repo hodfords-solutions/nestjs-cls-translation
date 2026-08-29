@@ -5,7 +5,7 @@ import { I18nResolver } from 'nestjs-i18n';
 export class CustomI18nResolver implements I18nResolver {
     constructor(private clsResolver: ClsResolver) {}
 
-    resolve(context: ExecutionContext): string | string[] | Promise<string | string[]> {
+    resolve(context: ExecutionContext): string | string[] | undefined {
         const params = this.clsResolver.resolve(context);
         const values = Object.values(params);
 
