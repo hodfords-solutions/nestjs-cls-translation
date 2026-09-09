@@ -157,8 +157,8 @@ importers:
         specifier: 17.4.1
         version: 17.4.1
       nestjs-cls:
-        specifier: 6.2.2
-        version: 6.2.2(@nestjs/common@12.0.1(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@12.0.1(@nestjs/common@12.0.1(reflect-metadata@0.2.2)(rxjs@7.8.2))(reflect-metadata@0.2.2)(rxjs@7.8.2))(reflect-metadata@0.2.2)(rxjs@7.8.2)
+        specifier: 6.3.0
+        version: 6.3.0(@nestjs/common@12.0.1(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@12.0.1(@nestjs/common@12.0.1(reflect-metadata@0.2.2)(rxjs@7.8.2))(reflect-metadata@0.2.2)(rxjs@7.8.2))(reflect-metadata@0.2.2)(rxjs@7.8.2)
       prettier:
         specifier: 3.9.6
         version: 3.9.6
@@ -1559,8 +1559,8 @@ packages:
     resolution: {integrity: sha512-NMPBRMJgiQHjbd8phG3Vebdx4kZ1H121rbl5IkMqeOsahptB9BKo/d7oJ3zTXqTgagn2bWlNSXkh0QUGM31RYg==}
     engines: {node: '>=18'}
 
-  nestjs-cls@6.2.2:
-    resolution: {integrity: sha512-4wgnikGUTwbkZFFLc/R7WkAb7qxLPYoIQsuvc+LqHZFmVWk7pMQaVDQZP0BNayP8Zdk+8pTYouTGsVCkZs3F3A==}
+  nestjs-cls@6.3.0:
+    resolution: {integrity: sha512-I+OHNoDq+Edos3wsE7iImkPrkBjqFOhX6omwrJvbFCP17PvQXrMo2mYnNUZtbaGoj7mznz7jLOEucq4MYaD9ag==}
     engines: {node: '>=18'}
     peerDependencies:
       '@nestjs/common': 12.0.1
@@ -3356,7 +3356,7 @@ snapshots:
     dependencies:
       content-type: 2.1.0
 
-  nestjs-cls@6.2.2(@nestjs/common@12.0.1(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@12.0.1(@nestjs/common@12.0.1(reflect-metadata@0.2.2)(rxjs@7.8.2))(reflect-metadata@0.2.2)(rxjs@7.8.2))(reflect-metadata@0.2.2)(rxjs@7.8.2):
+  nestjs-cls@6.3.0(@nestjs/common@12.0.1(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@12.0.1(@nestjs/common@12.0.1(reflect-metadata@0.2.2)(rxjs@7.8.2))(reflect-metadata@0.2.2)(rxjs@7.8.2))(reflect-metadata@0.2.2)(rxjs@7.8.2):
     dependencies:
       '@nestjs/common': 12.0.1(reflect-metadata@0.2.2)(rxjs@7.8.2)
       '@nestjs/core': 12.0.1(@nestjs/common@12.0.1(reflect-metadata@0.2.2)(rxjs@7.8.2))(reflect-metadata@0.2.2)(rxjs@7.8.2)
